@@ -1,24 +1,28 @@
 #include <iostream>
 #include <map>
 #include <string>
-
+#include <vector>
 using namespace std;
 class Seccion{
 	public:
-	vector<map> students;
-	Seccion():{};
-	add(string name,string age){
-		students.push_back(map[name]=age);
+	map<string,string> students;
+	Seccion(){};
+	void add(string name,string age){
+		students.insert(pair<string,string>(name,age));
 	}
-	borrar(string name,string age){
-		students.pop_back(map[name]=age);
+	void borrar(string name,string age){
+		students.erase(name);
 	}
 };
 
 int main(){
-	string="C Jacinto 10";
-	string read=x.split(" ");
-	if(x[0])
+	Seccion A;
+	string s="C";
+	string s1="Jacinto";
+	string s2="10";
 
-
-
+	if(s=="C"){
+		A.add(s1,s2);
+	}
+	return 0;
+}
