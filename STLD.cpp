@@ -3,14 +3,13 @@
 #include <vector>
 using namespace std;
 
-
-deque<int> function(deque<int> temp, int n){
+template <typename T>
+deque<T> function(deque<T> temp, int n){
 	int contador=0;
 	int posicion;
-	deque<int>::iterator it;
-	deque<int> ordenado;
+	deque<T> ordenado;
 	int size=(temp.size()/n);
-	vector<deque<int>> deques;
+	vector<deque<T>> deques;
 	if (size%2==0){
 		deques.resize(size);
 	}
@@ -18,7 +17,7 @@ deque<int> function(deque<int> temp, int n){
 		deques.resize(size+1);
 	}
 	cout<<"Deque size is "<<deques.size()<<endl;
-	for (it=temp.begin(); it!=temp.end();++it){
+	for (auto it=temp.begin(); it!=temp.end();++it){
 		posicion=contador/n;
 		deques[posicion].push_front(*it);
 		contador+=1;
